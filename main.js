@@ -2,6 +2,8 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
+app.isPackaged || require('electron-reloader')(module)
+
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
